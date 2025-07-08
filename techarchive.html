@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH ARCHIVE</title>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" alt="">
+        <a href="index.html" style="font-family: cursive;">HOME</a>
+        <button id="TogBut"
+        style="
+        padding: 10px;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+        font-family: cursive;">PROJECTS</button>
+    </div>
+    <div class="small_screen" id="Links">
+        <a href="bmi.html">BMI Calculator</a><br><br>
+        <a href="calc.html">Calculator</a><br><br>
+        <a href="techarchive.html">Tech Archive</a>
+    </div>
+    <h1 style="color: white;">The prduction of A guitar</h1>
+    <video width="320" height="240" controls autoplay>
+        <source src="VID_20230320_144811.mp4" type="video/mp4">
+    </video><br>
+    <h1 style="color: white;">A 12V battery charger</h1>
+    <img src="battery charger.jpg" width="320px" alt="">
+</body>
+</html>
+<script>
+        const togbut = document.getElementById("TogBut");
+        const links = document.getElementById("Links");
+        let isOpen = false;
+
+        togbut.addEventListener("click",function(){
+            if (!isOpen) {
+                links.style.display = "block";
+                isOpen = true;
+            } else {
+                links.style.display = "none";
+                isOpen = false;
+            }
+        })
+    </script>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background: url(bg.jpg);
+    }
+        .header a{
+    text-decoration: none;
+    color: white;
+}
+.header img{
+    width: 65px;
+    border-radius: 100%;
+}
+.header{
+    background-color: rgb(43, 20, 20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.small_screen{
+    border-radius: 20px;
+    display: none;
+    width: 250px;
+    margin-top: 2px;
+    margin-left: 66vw;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    animation: slidein 1s;
+}
+@media (max-width:780px) {
+    .small_screen{
+        margin-left: 35vw;
+    }
+}
+@keyframes slidein{
+    0%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+</style>
