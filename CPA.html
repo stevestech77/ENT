@@ -5,6 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>GPA CALCULATOR</title>
 </head>
+<div class="header">
+        <img src="logo.jpg" alt="">
+        <button id="TogBut"
+        style="
+        padding: 10px;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+        font-family: cursive;">PROJECTS</button>
+    </div>
+    <div class="small_screen" id="Links">
+        <a href="bmi.html">BMI Calculator</a><br><br>
+        <a href="calc.html">Calculator</a><br><br>
+        <a href="techarchive.html">Tech Archive</a>
+		<a href="GPA.html">Tech Archive</a>
+	</div>
 	<style>
 body {
     background-color: azure;
@@ -48,6 +66,21 @@ a {
     margin-left: 100px;
 }
 </style>
+<script>
+        const togbut = document.getElementById("TogBut");
+        const links = document.getElementById("Links");
+        let isOpen = false;
+
+        togbut.addEventListener("click",function(){
+            if (!isOpen) {
+                links.style.display = "block";
+                isOpen = true;
+            } else {
+                links.style.display = "none";
+                isOpen = false;
+            }
+        })
+</script>
 <body>
 	<h1>GPA CALCULATOR</h1>
 <div> <a href="Home-page.html">Click here to go back to HOMEPAGE</a></div>
